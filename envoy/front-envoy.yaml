@@ -14,7 +14,7 @@ static_resources:
             virtual_hosts:
             - name: backend
               domains:
-              - "localhost" # insert domain name
+              - "erldocker.htwsaar.de" # insert domain name
               routes:
               - match:
                   prefix: "/"      
@@ -39,7 +39,7 @@ static_resources:
             virtual_hosts:
             - name: backend
               domains:
-              - "localhost" # insert domain name
+              - "erldocker.htwsaar.de" # insert domain name
               routes:                                                                                     
           http_filters:
           - name: envoy.router
@@ -48,9 +48,9 @@ static_resources:
         common_tls_context:
           tls_certificates:
             - certificate_chain:
-                filename: "/etc/example-com.crt"
+                filename: "/etc/erldocker.htwsaar.de-req.pem"
               private_key:
-                filename: "/etc/example-com.key"
+                filename: "/etc/erldocker.htwsaar.de-key.key"
 
   - address:
       socket_address:
@@ -63,7 +63,7 @@ static_resources:
     - filter_chain_match:
         transport_protocol: tls
         server_names:
-          - localhost # insert domain name         
+          - erldocker.htwsaar.de # insert domain name         
     - filters:
       - name: envoy.tcp_proxy
         config:
@@ -73,9 +73,9 @@ static_resources:
         common_tls_context:
           tls_certificates:
             - certificate_chain:
-                filename: "/etc/example-com.crt"
+                filename: "/etc/erldocker.htwsaar.de-req.pem"
               private_key:
-                filename: "/etc/example-com.key"
+                filename: "/etc/erldocker.htwsaar.de-key.key"
  
 # vorsicht
   clusters:
