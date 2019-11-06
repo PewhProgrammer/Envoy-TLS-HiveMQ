@@ -6,7 +6,4 @@ FROM envoyproxy/envoy:latest
 # RUN apt-get update && apt-get -q install -y \
 #    curl
 
-RUN cd etc
-RUN ls
-
 CMD /usr/local/bin/envoy -c /etc/envoyfile/front-envoy.yaml --service-cluster front-proxy    
