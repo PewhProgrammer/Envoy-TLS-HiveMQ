@@ -6,8 +6,8 @@ services:
       context: ./envoy
       dockerfile: ./Dockerfile
     volumes:
-      - ./envoy/front-envoy.yaml:/etc/front-envoy.yaml 
-      - /srv/certs/:/etc/ # mount server certificates to etc
+      - ./envoy:/etc/envoy
+      - /srv/certs:/etc/certs # mount server certificates to etc
     networks:
       - envoymesh
     expose:

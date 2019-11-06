@@ -9,4 +9,4 @@ FROM envoyproxy/envoy:latest
 RUN cd etc
 RUN ls
 
-CMD /usr/local/bin/envoy -c /etc/front-envoy.yaml --service-cluster front-proxy    
+CMD /usr/local/bin/envoy -c /etc/envoy/front-envoy.yaml --service-cluster front-proxy    
