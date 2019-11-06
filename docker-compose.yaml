@@ -2,6 +2,7 @@ version: "3.7"
 
 services:
   front-envoy:
+    container_name: envoy_proxy-service
     build:
       context: ./envoy
       dockerfile: ./Dockerfile
