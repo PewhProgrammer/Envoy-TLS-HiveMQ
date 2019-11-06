@@ -26,7 +26,7 @@ services:
         aliases:
           - hivemq
     ports:
-      - "8080:8080"
+      - "9080:8080"
 
 networks:
   envoymesh: {}
