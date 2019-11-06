@@ -48,9 +48,9 @@ static_resources:
         common_tls_context:
           tls_certificates:
             - certificate_chain:
-                filename: "/etc/erldocker.htwsaar.de-req.pem"
+                filename: "/etc/certs/erldocker.htwsaar.de-req.pem"
               private_key:
-                filename: "/etc/erldocker.htwsaar.de-key.key"
+                filename: "/etc/certs/erldocker.htwsaar.de-key.key"
 
   - address:
       socket_address:
@@ -73,9 +73,9 @@ static_resources:
         common_tls_context:
           tls_certificates:
             - certificate_chain:
-                filename: "/etc/erldocker.htwsaar.de-req.pem"
+                filename: "/etc/certs/erldocker.htwsaar.de-req.pem"
               private_key:
-                filename: "/etc/erldocker.htwsaar.de-key.key"
+                filename: "/etc/certs/erldocker.htwsaar.de-key.key"
  
 # vorsicht
   clusters:
