@@ -11,12 +11,12 @@ services:
       - /srv/certs:/etc/certs # mount server certificates to etc
     networks:
       - envoymesh
-    expose:
-      - "80"
+    expose: # ports are only exposed to internal services in the network
+      - "80" 
       - "8001"
     ports:
-      - "8000:80"
-      - "1883:1883"
+      - "8000:80" # host:container
+      #- "1883:1883"
       - "8883:8883"
       - "8001:8001"
 

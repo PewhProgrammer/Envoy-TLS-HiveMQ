@@ -23,7 +23,8 @@ static_resources:
                   https_redirect: true                                                           
           http_filters:
           - name: envoy.router
-            config: {}      
+            config: {}   
+
   - address:
       socket_address:
         address: 0.0.0.0
@@ -51,6 +52,7 @@ static_resources:
                 filename: "/etc/certs/erldocker.htwsaar.de-req.pem"
               private_key:
                 filename: "/etc/certs/erldocker.htwsaar.de-key.key"
+
   - address:
       socket_address:
         protocol: TCP
@@ -69,7 +71,7 @@ static_resources:
         port_value: 8883
     listener_filters:
       - name: "envoy.listener.tls_inspector"
-        config: {}    
+        typed_config: {}   
     filter_chains: 
     - filter_chain_match:
         transport_protocol: tls
